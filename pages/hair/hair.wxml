@@ -1,0 +1,46 @@
+<view class="order">
+  <view class="tab-title">
+    <view class="flex {{active === 0 ? 'active' : null}}">
+      <span data-index="0" bindtap="bindOrderTap">全部</span>
+    </view>
+    <view class="flex {{active === 1 ? 'active' : null}}">
+      <span data-index="1" bindtap="bindOrderTap">男士</span>
+    </view>
+    <view class="flex {{active === 2 ? 'active' : null}}">
+      <span data-index="2" bindtap="bindOrderTap">女士</span>
+    </view>
+    <view class="flex {{active === 3 ? 'active' : null}}">
+      <span data-index="3" bindtap="bindOrderTap">儿童</span>
+    </view>
+  </view>
+  <view class="tab-content">
+    <view class="content {{active === 0 ? 'active' : null}}">
+      <view class="content-item" wx:for="{{hairListAll}}" wx:key="{{item.url}}">
+        <image src="{{item.url}}"></image>
+        <p>{{item.name}}</p>
+        <text>{{item.description}}</text>
+      </view>
+    </view>
+    <view class="content {{active === 1 ? 'active' : null}}">
+      <view class="content-item" wx:for="{{hairListMen}}" wx:key="{{item.url}}">
+        <image src="{{item.url}}"></image>
+        <p>{{item.name}}</p>
+        <text>{{item.description}}</text>
+      </view>
+    </view>
+    <view class="content {{active === 2 ? 'active' : null}}">
+      <view class="content-item" wx:for="{{hairListWomen}}" wx:key="{{item.url}}">
+        <image src="{{item.url}}"></image>
+        <p>{{item.name}}</p>
+        <text>{{item.description}}</text>
+      </view>
+    </view>
+    <view class="content {{active === 3 ? 'active' : null}}">
+      <view class="content-item" wx:for="{{hairListChild}}" wx:key="{{item.url}}">
+        <image src="{{item.url}}"></image>
+        <p>{{item.name}}</p>
+        <text>{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+</view>

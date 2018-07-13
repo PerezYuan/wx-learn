@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class='lifa-wrap'>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <image src="img/location.png"/>
+      <text>{{array[index]}}</text>
+    </view>
+  </picker>
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="shops_title">
+    <p>附近门店</p>
+    <text>为您精选附近门店</text>
+  </view>
+  <view class="shop_list">
+    <view class="section section_gap" wx:for="{{shopList}}" wx:for-item="item" wx:key="*this">
+      <view class="section__ctn">
+        <image style="width: 100%; height: 400rpx; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.src}}"></image>
+      </view>
+      <view class="section__title">{{item.title}}</view>
+      <view class="section__location"><image src="img/location.png"/>{{item.location}}</view>
+    </view>
+  </view>
+</view>

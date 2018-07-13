@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/index",
+    "pages/home/index",
+    "pages/hair/hair",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTitleText": "为剪-为你而生"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order_selected.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

@@ -1,0 +1,36 @@
+page {
+  background-color: #eee;
+}
+
+.tab-title {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.flex {
+  float: left;
+  width: 25%;
+  text-align: center;
+  font-size: 14px;
+  margin: 20rpx 0;
+  overflow: hidden;
+}
+
+.flex span {
+  display: block;
+  width: 70%;
+  text-align: center;
+  color: #666;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  padding: 10rpx;
+}
+
+.flex.active span {
+  background-color: #1296db;
+  color: #fff;
+}
+
+.tab-content {
+  
+}

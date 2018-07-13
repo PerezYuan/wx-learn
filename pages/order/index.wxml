@@ -1,0 +1,19 @@
+<view class="order">
+  <view class="tab-title">
+    <view class="flex {{active === 0 ? 'active' : null}}">
+      <span data-index="0" bindtap="bindOrderTap">全部</span>
+    </view>
+    <view class="flex {{active === 1 ? 'active' : null}}">
+      <span data-index="1" bindtap="bindOrderTap">待服务</span>
+    </view>
+    <view class="flex {{active === 2 ? 'active' : null}}">
+      <span data-index="2" bindtap="bindOrderTap">已完成</span>
+    </view>
+    <view class="flex {{active === 3 ? 'active' : null}}">
+      <span data-index="3" bindtap="bindOrderTap">已退款</span>
+    </view>
+  </view>
+  <view class="tab-content">
+    
+  </view>
+</view>
