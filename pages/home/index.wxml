@@ -1,6 +1,6 @@
 <view class="container">
   <block wx:if="{{!hasUserInfo && canIUse}}" class="no-user">
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <button class='no-user-info' open-type="getUserInfo" bindgetuserinfo="getUserInfo">请授权</button>
   </block>
   <block wx:else>
     <view class='user-info'>

@@ -25,10 +25,6 @@
   padding: 20rpx;
 }
 
-.lifa-wrap swiper {
-  margin-top: 20rpx;
-}
-
 .slide-image {
   width: 100%;
   height: 100%;

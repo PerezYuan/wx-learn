@@ -4,10 +4,11 @@
     "pages/order/index",
     "pages/home/index",
     "pages/hair/hair",
+    "pages/auth/index",
     "pages/logs/logs"
   ],
   "window": {
-    "navigationBarTitleText": "为剪-为你而生"
+    "navigationBarTitleText": "为简-为你而生"
   },
   "tabBar": {
     "backgroundColor": "#fff",

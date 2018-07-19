@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+const util = require('../../utils/util.js')
 const app = getApp()
 
 Page({
@@ -8,11 +9,7 @@ Page({
     index: 0,
     array: ['重庆', '杭州', '成都'],
     // swiper相关
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
+    imgUrls: [],
     indicatorDots: true,
     autoplay: false,
     interval: 3000,
@@ -43,16 +40,34 @@ Page({
     })
   },
   onLoad: function () {
-    // 获取定位信息
-    wx.getLocation({
-      type: 'wgs84',
+    // util.auth(app);
+    // 获取banner图
+    const that = this
+    wx.request({
+      url: 'https://api.weijianlife.com/api/banner/list', //仅为示例，并非真实的接口地址
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
       success: function (res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        var speed = res.speed
-        var accuracy = res.accuracy
-        console.log(res)
+        if (res.data.code === 200) {
+          const imgUrls = res.data.list.map(item => { return item.url })
+          that.setData({
+            imgUrls
+          })
+        }
       }
     })
+    // 获取定位信息
+    // wx.getLocation({
+    //   type: 'wgs84',
+    //   success: function (res) {
+    //     var latitude = res.latitude
+    //     var longitude = res.longitude
+    //     var speed = res.speed
+    //     var accuracy = res.accuracy
+    //     // console.log(res)
+    //   }
+    // })
   }
 })

@@ -1,0 +1,5 @@
+<view class="container">
+  <block class="no-user">
+    <button class='no-user-info' open-type="getUserInfo" bindgetuserinfo="getUserInfo">请授权</button>
+  </block>
+</view>
